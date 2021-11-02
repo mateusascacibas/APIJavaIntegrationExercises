@@ -13,7 +13,7 @@ public class Elevator {
 		this.peopleInside = 0;
 	}
 	
-	public void Entrar() {
+	public void toGetIn() {
 		if(this.peopleInside < this.capacityElevator) {
 			this.peopleInside += 1;
 		}
@@ -22,7 +22,7 @@ public class Elevator {
 		}
 	}
 	
-	public void Sair() {
+	public void toGetOut() {
 		if(this.peopleInside > 0) {
 			this.peopleInside -= 1;
 		}
@@ -31,7 +31,7 @@ public class Elevator {
 		}
 	}
 	
-	public void Subir() {
+	public void upload() {
 		if(this.currentFloor < this.totalFloors) {
 			this.currentFloor += 1;
 		}
@@ -40,7 +40,7 @@ public class Elevator {
 		}
 	}
 	
-	public void Descer() {
+	public void download() {
 		if(this.currentFloor > 0) {
 			this.currentFloor -= 1;
 		}
@@ -49,7 +49,7 @@ public class Elevator {
 		}
 	}
 	
-	public void getInformacoes() {
+	public void getInfo() {
 		System.out.println("Andar Atual: " + getcurrentFloor() + "\nTotal de Andares: " + gettotalFloors() + "\nPessoas no elevador: " + getpeopleInside() + "\nCapacidade: " + getcapacityElevator());
 	}
 	public int gettotalFloors() {
