@@ -31,15 +31,25 @@ public class ClassController {
 		}
 	}
 	
-	@GetMapping("exe3")
-	public ResponseEntity<Object> exe3(@QueryParam("cod1") int cod1, 
+	@GetMapping("exe2")
+	public ResponseEntity<Object> exe2(@QueryParam("cod1") int cod1, 
 			@QueryParam("name1") String name1,
 			@QueryParam("salary1") double salary1,
 			@QueryParam("cod2") int cod2,
 			@QueryParam("name2") String name2,
 			@QueryParam("salary2") double salary2) {
 		try {
-			return ResponseEntity.ok(service.exercise3(cod1, name1, salary1, cod2, name2, salary2));
+			return ResponseEntity.ok(service.exercise2(cod1, name1, salary1, cod2, name2, salary2));
+		}catch(Exception e) {
+			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	@GetMapping("exe3")
+	public ResponseEntity<Object> exe3(@QueryParam("capacityElevator") int capacityElevator, 
+			@QueryParam("totalFloors") int totalFloors, @QueryParam("currentFloor") int currentFloor, @QueryParam("peopleInside") int peopleInside, @QueryParam("method") int method){
+		try {
+			return ResponseEntity.ok(service.exercise3(capacityElevator, totalFloors, currentFloor, peopleInside, method));
 		}catch(Exception e) {
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}

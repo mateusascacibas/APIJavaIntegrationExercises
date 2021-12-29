@@ -2,22 +2,22 @@ package com.project.integration.JavaAngular.api.model;
 
 public class CheckingAccount {
 	private int numCC;
-	private double saldoCC;
+	private double balanceCC;
 	
 	public void deposit(double value) {
-		this.saldoCC += value;
+		this.balanceCC += value;
 	}
 	
 	public void toWithdraw(double value) {
-		this.saldoCC -= value;
+		this.balanceCC -= value;
 	}
 	
 	public void setBalance(double value) {
-		this.saldoCC = value;
+		this.balanceCC = value;
 	}
 	
 	public double getBalance() {
-		return this.saldoCC;
+		return this.balanceCC;
 	}
 	
 	public void setNumCC(int numCC) {

@@ -1,4 +1,4 @@
-package com.project.integration.JavaAngular.api.controller;
+
 
 import javax.ws.rs.QueryParam;
 

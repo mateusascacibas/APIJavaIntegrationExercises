@@ -3,36 +3,36 @@ package com.project.integration.JavaAngular.api.service;
 public class ConditionalService {
 	public String exercise1(int num) {
 		if(num < 0 ) {
-			return "Negativo.";
+			return "Negative.";
 		}
 		else {
-			return "Positivo ou 0.";
+			return "Positive or 0.";
 		}
 	}
 	public String exercise2(int num) {
 		if(num % 2 == 0 ) {
-			return "Par";
+			return "Pair";
 		}
 		else {
-			return "Impar.";
+			return "Odd.";
 		}
 	}
 	
 	public String exercise3(int A, int B) {
 		if(A % B == 0 || B % A == 0) {
-			return "Sao multiplos.";
+			return "Are multiple.";
 		}else {
-			return "Nao sao multiplos";
+			return "Are not multiple.";
 		}
 	}
 	
 	public String exercise4(int startTime, int endTime) {
 		
 		if(startTime > endTime) {
-			return "Duracao : " + (startTime - endTime);
+			return "Duration : " + (startTime - endTime) + "hours";
 		}
 		else {
-			return "Duracao: " + (endTime - startTime);
+			return "Duration: " + (endTime - startTime) + "hours";
 		}
 	}
 }

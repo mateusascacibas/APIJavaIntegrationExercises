@@ -31,8 +31,8 @@ public class ClassServiceTest {
 	}
 
 	@Test
-	public void exe3Test() {
-		String maior = service.exercise3(1, "Mateus", 1200, 2, "Tiago", 1200).toString();
+	public void exe2Test() {
+		String maior = service.exercise2(1, "Mateus", 1200, 2, "Tiago", 1200).toString();
 		assertEquals(
 				"Employee 1\nCod: 1 - Name: Mateus - Salary: 14400.0\nEmployee 2\nCod: 2 - Name: Tiago - Salary: 14400.0",
 				maior);

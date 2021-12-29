@@ -13,12 +13,19 @@ public class Elevator {
 		this.peopleInside = 0;
 	}
 	
+	public Elevator(int capacityElevator, int totalFloors, int currentFloor, int peopleInside) {
+		this.capacityElevator = capacityElevator;
+		this.totalFloors = totalFloors;
+		this.currentFloor = currentFloor;
+		this.peopleInside = peopleInside;
+	}
+	
 	public void toGetIn() {
 		if(this.peopleInside < this.capacityElevator) {
 			this.peopleInside += 1;
 		}
 		else {
-			System.out.println("Elevador cheio!");
+			System.out.println("Elevator is already full");
 		}
 	}
 	
@@ -27,7 +34,7 @@ public class Elevator {
 			this.peopleInside -= 1;
 		}
 		else {
-			System.out.println("Elevador ja esta vazio!");
+			System.out.println("Elevator is already empty");
 		}
 	}
 	
@@ -36,7 +43,7 @@ public class Elevator {
 			this.currentFloor += 1;
 		}
 		else {
-			System.out.println("Elevador ja esta no ultimo andar!");
+			System.out.println("Elevator is already on the top floor!");
 		}
 	}
 	
@@ -45,12 +52,12 @@ public class Elevator {
 			this.currentFloor -= 1;
 		}
 		else {
-			System.out.println("Elevador ja esta no terreo!");
+			System.out.println("Elevator is already on the ground floor!");
 		}
 	}
 	
-	public void getInfo() {
-		System.out.println("Andar Atual: " + getcurrentFloor() + "\nTotal de Andares: " + gettotalFloors() + "\nPessoas no elevador: " + getpeopleInside() + "\nCapacidade: " + getcapacityElevator());
+	public String getInfo() {
+		return getcurrentFloor() + "\n\n" + "Total Floors: " + gettotalFloors() + "\n\n" + getpeopleInside() + "\n\nCapacity: " + getcapacityElevator();
 	}
 	public int gettotalFloors() {
 		return totalFloors;
@@ -58,8 +65,8 @@ public class Elevator {
 	public void settotalFloors(int totalFloors) {
 		this.totalFloors = totalFloors;
 	}
-	public int getpeopleInside() {
-		return peopleInside;
+	public String getpeopleInside() {
+		return "PeopleInside : " + peopleInside;
 	}
 	public void setpeopleInside(int peopleInside) {
 		this.peopleInside = peopleInside;
@@ -70,8 +77,8 @@ public class Elevator {
 	public void setcapacityElevator(int capacityElevator) {
 		this.capacityElevator = capacityElevator;
 	}
-	public int getcurrentFloor() {
-		return currentFloor;
+	public String getcurrentFloor() {
+		return "Current floor : " + currentFloor;
 	}
 	public void setcurrentFloor(int currentFloor) {
 		this.currentFloor = currentFloor;

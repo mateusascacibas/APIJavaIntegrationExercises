@@ -10,7 +10,7 @@ public class Lamp {
 	
 	public void turnOn() {
 		if(this.on) {
-			System.out.println("Lampada ja esta ligada!");
+			System.out.println("Lamp is already on!");
 		}
 		else {
 			this.on = true;
@@ -19,7 +19,7 @@ public class Lamp {
 	
 	public void turnOff() {
 		if(!this.on) {
-			System.out.println("Lampada ja esta desligada");
+			System.out.println("Lamp is already off!");
 		}
 		else {
 			this.on = false;
@@ -32,7 +32,7 @@ public class Lamp {
 		else {
 			status = "off";
 		}
-		System.out.println("Lampada atualmente esta: " +  status);
+		System.out.println("Lamp is currently: " +  status);
 		
 	}
 
