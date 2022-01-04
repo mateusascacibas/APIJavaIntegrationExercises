@@ -11,21 +11,21 @@ public class ConditionalServiceTest {
 
 	@Test
 	public void exe1Test() {
-		assertEquals("Negativo.", service.exercise1(-2));
+		assertEquals("Negative.", service.exercise1(-2));
 	}
 	
 	@Test
 	public void exe2Test() {
-		assertEquals("Par", service.exercise2(2));
+		assertEquals("Pair", service.exercise2(2));
 	}
 	
 	@Test
 	public void exe3Test() {
-		assertEquals("Nao sao multiplos", service.exercise3(5,7));
+		assertEquals("Are not multiple.", service.exercise3(5,7));
 	}
 	@Test
 	public void exe4Test() {
-		assertEquals("Duracao: 2", service.exercise4(12, 14));
+		assertEquals("Duration: 2 hours.", service.exercise4(12, 14));
 	}
 	
 }

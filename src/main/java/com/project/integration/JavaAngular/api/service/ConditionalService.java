@@ -29,10 +29,10 @@ public class ConditionalService {
 	public String exercise4(int startTime, int endTime) {
 		
 		if(startTime > endTime) {
-			return "Duration : " + (startTime - endTime) + "hours";
+			return "Duration : " + (startTime - endTime) + " hours.";
 		}
 		else {
-			return "Duration: " + (endTime - startTime) + "hours";
+			return "Duration: " + (endTime - startTime) + " hours.";
 		}
 	}
 }

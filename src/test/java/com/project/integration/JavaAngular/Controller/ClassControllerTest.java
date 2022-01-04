@@ -26,4 +26,9 @@ public class ClassControllerTest {
 	public void exe2Test() {
 		assertNotNull(controller.exe2(Mockito.anyInt(), Mockito.anyString(), Mockito.anyDouble(),Mockito.anyInt(), Mockito.anyString(), Mockito.anyDouble()));
 	}
+	
+	@Test
+	public void exe3Test() {
+		assertNotNull(controller.exe3(Mockito.anyInt(), Mockito.anyInt(), Mockito.anyInt(), Mockito.anyInt(), Mockito.anyInt()));
+	}
 }
